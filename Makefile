@@ -9,8 +9,7 @@ test:
 bootstrap_db:
 	docker-compose up -d db
 
-
-build:
+build: compile
 	./mvnw package -DskipTests
 
 launch_server: build bootstrap_db
